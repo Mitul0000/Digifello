@@ -21,7 +21,7 @@ app.use('/api/comment/',commentRoutes);
 app.use('/api/tools/',toolRoutes);
 
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 MongoDBConnect.then(() => {
   app.listen(port, () => {

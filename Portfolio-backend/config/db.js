@@ -1,6 +1,6 @@
 // This file manages the connection to the database.
 
-require('dotenv').config()
+require('dotenv').config({ quiet: true })
 const mongoose = require('mongoose')
 
 if (!process.env.MONGO_URI) {
