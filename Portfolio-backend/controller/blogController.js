@@ -29,7 +29,7 @@ exports.getBlog = async (request, response) => {
     const foundBlog = await Blog.findByIdAndUpdate(
       blogId,
       { $inc: { views: 1 } },
-      { new: true }
+      { returnDocument: 'after' }
     );
 
     if (!foundBlog) {
