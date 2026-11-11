@@ -3,6 +3,8 @@ import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { Search, Sun, Moon, Menu, X, PlusCircle, LayoutDashboard, LogOut } from 'lucide-react';
 import { useAuth } from '../utils/AuthContext';
 import SearchModal from './SearchModal';
+import brandLogoDark from '../assets/brand-transparent.png';
+import brandLogoLight from '../assets/brand-transparent-dark.png';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -60,13 +62,19 @@ export default function Navbar() {
       <header className="sticky top-0 z-40 w-full border-b border-border bg-bg/90 backdrop-blur-md transition-colors">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
           
-          {/* Left: Brand Wordmark + Small Search Button (Requirement 1) */}
-          <div className="flex items-center gap-2.5">
+          {/* Left: Brand Header Logo (Digifello.dev) + Small Search Button */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
             <Link
               to="/"
-              className="text-lg font-bold tracking-tight text-text hover:opacity-85 transition-opacity flex items-center gap-1.5"
+              className="group flex items-center focus:outline-none transition-transform active:scale-95"
+              title="Digifello.dev Home"
+              aria-label="Digifello.dev Home"
             >
-              <span>Digifello</span>
+              <img
+                src={theme === 'light' ? brandLogoLight : brandLogoDark}
+                alt="Digifello.dev"
+                className="h-7 sm:h-8 w-auto object-contain transition-opacity duration-200 group-hover:opacity-85 select-none"
+              />
             </Link>
 
             {/* Compact 34px round search button */}
