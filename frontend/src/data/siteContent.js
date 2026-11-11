@@ -214,14 +214,14 @@ export const siteContent = {
     bookingUrl: '', // TODO: Owner to add Calendly/Cal.com link if available
     contact: {
       email: 'mitulchowdhury042006@gmail.com',
-      phone: '+91 98765 43210',
+      phone: '+91 7603025080',
       location: 'Gandhinagar, Gujarat, India',
       workingHours: 'Monday – Saturday, 10:00 AM – 7:00 PM IST',
       replyTime: 'Typically within 24 hours',
       github: 'https://github.com/Mitul0000',
       medium: 'https://medium.com/@mitul_digifello',
       twitter: 'https://twitter.com/digifello',
-      linkedin: 'https://linkedin.com/in/mitul-chowdhury',
+      linkedin: 'https://in.linkedin.com/in/mitul-chowdhury-200974374',
     },
     faqs: [
       {
